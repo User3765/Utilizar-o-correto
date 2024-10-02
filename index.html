@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerador de Nota Fiscal</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Fonte Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <img src="logo.png" alt="Logotipo" id="logo">
+        <div class="company-info">
+            <h1>Connectcar Mecânica Automotiva</h1>
+            <p>Rua Rio dos Anjos - Içara - SC</p>
+            <p>Fone: (48) 9830-9237 / (48) 9967-0530</p>
+            <p>Email: connectar.automotiva@gmail.com</p>
+        </div>
+    </header>
+
+    <!-- Informações do Cliente -->
+    <section class="client-info">
+        <div class="column">
+            <label for="nomeCliente">Nome do Cliente:</label>
+            <input type="text" id="nomeCliente" name="nomeCliente" required>
+
+            <label for="placaVeiculo">Placa do Veículo:</label>
+            <input type="text" id="placaVeiculo" name="placaVeiculo" required>
+
+            <label for="modeloVeiculo">Modelo do Veículo:</label>
+            <input type="text" id="modeloVeiculo" name="modeloVeiculo" required>
+        </div>
+
+        <div class="column">
+            <label for="cpfCnpj">CPF/CNPJ:</label>
+            <input type="text" id="cpfCnpj" name="cpfCnpj" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone" name="telefone" required>
+
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data" required>
+        </div>
+
+        <div class="column">
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" name="bairro" required>
+
+            <label for="estado">Estado:</label>
+            <input type="text" id="estado" name="estado" required>
+
+            <label for="celular">Celular:</label>
+            <input type="text" id="celular" name="celular" required>
+
+            <label for="obs">Observações:</label>
+            <textarea id="obs" name="obs" rows="3" placeholder="Adicione observações aqui..."></textarea>
+        </div>
+    </section>
+
+    <!-- Tabela de Itens -->
+    <section class="items-section">
+        <table id="items-table">
+            <thead>
+                <tr>
+                    <th>Descrição do Produto</th>
+                    <th>Preço Unitário (R$)</th>
+                    <th>Quantidade</th>
+                    <th>Soma Total (R$)</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" name="descricao[]" required></td>
+                    <td><input type="number" name="precoUnitario[]" step="0.01" min="0" required></td>
+                    <td><input type="number" name="quantidade[]" min="1" required></td>
+                    <td><input type="number" name="somaTotal[]" step="0.01" min="0" readonly></td>
+                    <td><button type="button" class="remove-item">Remover</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" id="add-item">Adicionar Item</button>
+    </section>
+
+    <!-- Botão para Gerar Nota Fiscal -->
+    <button type="submit" id="gerar-nf">Gerar Nota Fiscal</button>
+
+    <!-- Resultado -->
+    <div id="resultado"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

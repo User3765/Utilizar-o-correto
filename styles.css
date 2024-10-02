@@ -1,0 +1,173 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    align-items: center;
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+}
+
+#logo {
+    width: 80px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.company-info h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.company-info p {
+    margin: 2px 0;
+    font-size: 14px;
+}
+
+/* Informações do Cliente */
+.client-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.client-info .column {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.client-info .column label {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+}
+
+.client-info .column input,
+.client-info .column textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Tabela de Itens */
+.items-section {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+#items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+#items-table th,
+#items-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+#items-table th {
+    background-color: #f2f2f2;
+}
+
+#items-table input {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    border: none;
+    background-color: #f9f9f9;
+}
+
+#items-table input[readonly] {
+    background-color: #e9ecef;
+}
+
+#add-item {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#add-item:hover {
+    background-color: #218838;
+}
+
+.remove-item {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.remove-item:hover {
+    background-color: #c82333;
+}
+
+/* Botão para Gerar Nota Fiscal */
+#gerar-nf {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    background-color: #007BFF;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#gerar-nf:hover {
+    background-color: #0056b3;
+}
+
+/* Resultado */
+#resultado {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#resultado h2 {
+    color: #28a745;
+}
+
+#resultado a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+#resultado a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .client-info {
+        flex-direction: column;
+    }
+
+    .client-info .column {
+        margin: 10px 0;
+    }
+}
